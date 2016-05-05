@@ -68,7 +68,7 @@ One way could be by using `this.props.children`, not so sure is very likeable.
 
 A better way (in my opinion, lets see if feasible) is to pass containers through props, and define them into contract as `React.PropTypes.element`. In this way we will stay in the actual container definition.
 
-A container can import other containers and components and can pass to props only containers (why you should pass components?), a component can import only other components.
+A container can import other containers and one component and can pass to props only containers (why you should pass components?), a component can import only other components.
 
 ![Composing elements](img/ViewStruct.png "Composing elements")
 
@@ -84,3 +84,47 @@ http://jaysoo.ca/2016/02/28/organizing-redux-application/
 
 http://marmelab.com/blog/2015/12/17/react-directory-structure.html
 
+As already said in different articles there is a short tree of defining by nature the folders, that fails in bigger applications. Even grouping by domain, better than previous, fails in my opinion by repeating same wordings again and again.
+
+I would use a deeper structure, not to deep as it can result in too big require paths, but deep enough to give an understandable and meaningful view over the application.
+ 
+### Pods and Apps of Apps
+ 
+Apps of Apps can become a huge tree, the concept of Pods being more appealing for me as you can import a Pod into another. So lets debate Pods project structure, Features First.
+
+```
+src/
+  auth/
+    redux/
+      actions/
+      reducers/
+    components/
+      todo/
+      addTodo/
+    helpers/
+    container1.js
+    container2.js
+    appReducer.js
+    index.js
+  comments/
+    redux/
+    components/
+    helpers/
+    container1.js
+    container2.js
+    appReducer.js
+    index.js
+  todos/
+    . . .
+  mainLayout/
+    . . .
+  . . .
+  mainReducer.js
+```
+ 
+ The last level, defining another set of functionalities, it's needed only for a stack that builds for different platforms, as ex React and React Native, as contains files for each platform. 
+ 
+ As for the redux folder I would prefer something that generates actions from reducers or reducers from actions, something that you are defining once and have both as a result.
+ 
+ Containers are placed just in the root of each Pod, naturally requiring from subfolders. A container can also import a container from another Pod.
+  
