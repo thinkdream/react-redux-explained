@@ -99,8 +99,8 @@ src/
       actions/
       reducers/
     components/
-      todo/
-      addTodo/
+      login/
+      subscribe/
     helpers/
     container1.js
     container2.js
