@@ -22,7 +22,8 @@ Also, the levels presented here are flexible and orientative, you can add/remove
 
 One of the definitions of MVC architecture is shown as below:
 
-![MVC](img/ocEWx.png | width=100)
+<!--![MVC](img/ocEWx.png)-->
+<img src="img/ocEWx.png" width=200 />
 
 That's why, in a simplified model React/Redux can be represented in the same way:
 
