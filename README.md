@@ -28,3 +28,12 @@ One of the definitions of MVC architecture is shown as below:
 That's why, in a simplified model React/Redux can be represented in the same way:
 
 ![RRMVC](img/RRMVC.png "RRMVC")
+
+
+## Stacking
+
+Stacking the Components/Containers is possible in 2 ways. 
+
+The 3rd representation probably, not yet experimented, I don't know if is over-engineering. Probably gives some flexibility with the cost of extra code.   
+
+![Stacking](img/Structure.png "Stacking")
