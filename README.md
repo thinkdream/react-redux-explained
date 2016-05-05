@@ -66,8 +66,13 @@ One way could be by using `this.props.children`, not so sure is very likeable.
     });
 ```
 
-A better way (in my opinion, lets see if feasible) is to pass containers through props, and define them into contract as `React.PropTypes.element`.
+A better way (in my opinion, lets see if feasible) is to pass containers through props, and define them into contract as `React.PropTypes.element`. In this way we will stay in the actual container definition.
 
+A container can import other containers and components and can pass to props only containers (why you should pass components?), a component can import only other components.
+
+![Composing elements](img/ViewStruct.png "Composing elements")
+
+In this very moment we will obtain a damn crazy piece of structure.
 
 ## Application organisation / Project structure 
 
