@@ -6,7 +6,7 @@
 
 As in any application using a database, on the initialization part of it you'll make the connection, usually by selecting the schema, too, in case we consider that we can connect to whole database.
 
-In the first part presented below it is a simple relation, usually found in all React/Redux examples, but, I found that, if you want to build a more flexible application - as ex using React Native, too - it's a bit better to use the second.  
+In the first part presented below it is a simple relation, usually found in all React/Redux examples, <strike>but, I found that, if you want to build a more flexible application - as ex using React Native, too - it's a bit better to use the second<strike>. Yeap, looks like renaming the layout in the picture into router should be the choice.  
 
 ![App](img/App.png "Application start")  
   
@@ -116,7 +116,8 @@ src/
     index.js
   todos/
     . . .
-  mainLayout/
+  router/
+  mainLayouts/
     . . .
   . . .
   mainReducer.js
@@ -129,3 +130,5 @@ As for the redux folder I would prefer something that generates actions from red
 Containers are placed just in the root of each Pod, naturally requiring from subfolders. A container can also import a container from another Pod.
   
 `index.js` can replace very well `appReducer.js` by returning that and the main container of the Pod, probably the best way to allow easier a Pod into another.
+
+If you have too many files in the root of a Pod, probably you should take in account the creation of a new Pod.
