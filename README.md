@@ -116,11 +116,12 @@ src/
     index.js
   todos/
     . . .
-  router/
-  mainLayouts/
+  routes/
+    `create routes for the build stacks`
+  layouts/
     . . .
   . . .
-  mainReducer.js
+  index.js
 ```
  
 The last level, defining another set of functionalities, it's needed only for a stack that builds for different platforms, as ex React and React Native, as contains files for each platform. 
@@ -132,3 +133,6 @@ Containers are placed just in the root of each Pod, naturally requiring from sub
 `index.js` can replace very well `appReducer.js` by returning that and the main container of the Pod, probably the best way to allow easier a Pod into another.
 
 If you have too many files in the root of a Pod, probably you should take in account the creation of a new Pod.
+
+
+`src/index.js` delivers main entry point of the app, the place where the store is created and the router is attached.
