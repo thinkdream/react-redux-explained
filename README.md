@@ -95,9 +95,7 @@ Apps of Apps can become a huge tree, the concept of Pods being more appealing fo
 ```
 src/
   auth/
-    redux/
-      actions/
-      reducers/
+    data/
     components/
       login/
       subscribe/
@@ -107,7 +105,7 @@ src/
     appReducer.js
     index.js
   comments/
-    redux/
+    data/
     components/
     helpers/
     container1.js
@@ -136,3 +134,5 @@ If you have too many files in the root of a Pod, probably you should take in acc
 
 
 `src/index.js` delivers main entry point of the app, the place where the store is created and the router is attached.
+
+Adding into account `https://github.com/alpacaaa/redux-purify` reduces the structure of redux folder as it's not needed anymore to define actions independent of reducers.
