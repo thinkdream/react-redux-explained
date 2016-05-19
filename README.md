@@ -124,7 +124,7 @@ src/
  
 The last level, defining another set of functionalities, it's needed only for a stack that builds for different platforms, as ex React and React Native, as contains files for each platform. 
  
-As for the redux folder I would prefer something that generates actions from reducers or reducers from actions, something that you are defining once and have both as a result.
+As for the `data` redux folder I would prefer something that generates actions from reducers or reducers from actions, something that you are defining once and have both as a result.
  
 Containers are placed just in the root of each Pod, naturally requiring from subfolders. A container can also import a container from another Pod.
   
